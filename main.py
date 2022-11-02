@@ -1,4 +1,5 @@
 from jinja2 import Environment, PackageLoader, select_autoescape
+from api import get_cat_facts
 
 env = Environment(
     loader=PackageLoader("my_templates"),
@@ -7,4 +8,6 @@ env = Environment(
 
 template = env.get_template("index.html")
 
-print(template.render(the="variables", go="here"))
+data = get_cat_facts()
+
+print(template.render({"data":data}))
