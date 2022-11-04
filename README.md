@@ -1,0 +1,1 @@
+Ejecutar `python3 main.py`, asegurarse de tener todas los paquetes instalados correctamente
